@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Details</title>
+    <link rel="stylesheet" href="addAchieve.css">
+</head>
+<body class="dashboard">
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <div class="menu-toggle">
+            <button class="menu-btn" aria-label="Toggle Menu">☰</button>
+            <div class="menu-dropdown">
+                <ul>
+                    <a href="profile.html"><li>Profile</li></a>
+                    <a href="studDash.html"><li>Dashboard</li></a>
+                    <li>Logout</li>
+                </ul>
+            </div>
+        </div>
+        <h3>Upcoming Events</h3>
+        <div class="events-list">
+            <p>No upcoming events</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Achievement Details</h2>
+        <form>
+            <label for="achievement-name">Achievement Name:</label>
+            <input type="text" id="achievement-name" name="achievement-name" placeholder="Achievement Name" aria-label="Achievement Name">
+
+            <label for="achievement-date">Achievement Date:</label>
+            <input type="date" id="achievement-date" name="achievement-date" aria-label="Achievement Date">
+
+            <label for="achievement-category">Achievement Category:</label>
+            <select id="achievement-category" name="achievement-category" aria-label="Achievement Category">
+                <option value="">Select Category</option>
+                <option value="sports">Sports</option>
+                <option value="academic">Academic</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="achievement-level">Achievement Level:</label>
+            <select id="achievement-level" name="achievement-level" aria-label="Achievement Level">
+                <option value="">Select Level</option>
+                <option value="school">School</option>
+                <option value="state">State</option>
+                <option value="national">National</option>
+            </select>
+
+            <label for="position">Position:</label>
+            <select id="position" name="position" aria-label="Position">
+                <option value="">Select Position</option>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="rewards">Rewards:</label>
+            <input type="text" id="rewards" name="rewards" placeholder="Rewards" aria-label="Rewards">
+
+            <label for="certificates">Certificates/Medals/Trophy:</label>
+            <input type="file" id="certificates" name="certificates" aria-label="Certificates">
+
+            <label for="pictures">Pictures:</label>
+            <input type="file" id="pictures" name="pictures" aria-label="Pictures">
+
+            <div class="buttons">
+                <button type="button" class="update">Update</button>
+                <button type="button" class="add">Add</button>
+                <button type="button" class="delete">Delete</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // addAchieve.js
+document.querySelector('.menu-btn').addEventListener('click', () => {
+    const dropdown = document.querySelector('.menu-dropdown');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+    </script>
+</body>
+</html>
